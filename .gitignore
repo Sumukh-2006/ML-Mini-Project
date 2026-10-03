@@ -1,0 +1,181 @@
+# ==============================================================================
+# .gitignore for V1 HMM-Based TTS Project
+# ==============================================================================
+
+# ==============================================================================
+# 1. DATASETS & RAW ARCHIVES (DO NOT COMMIT)
+# ==============================================================================
+Dataset/
+dataset/
+datasets/
+data/
+raw_data/
+LJSpeech*/
+*.tar
+*.tar.gz
+*.tgz
+*.tar.bz2
+*.tar.xz
+*.zip
+*.7z
+*.rar
+*.gz
+*.bz2
+
+# ==============================================================================
+# 2. GENERATED / LARGE AUDIO FILES
+# ==============================================================================
+*.wav
+*.flac
+*.mp3
+*.ogg
+*.m4a
+*.aac
+*.wma
+*.aiff
+*.pcm
+
+# Synthesis & evaluation audio outputs
+outputs/synthesis/
+outputs/oracle_reconstruction/
+outputs/evaluation/baseline_wavs/
+outputs/evaluation/hmm_wavs/
+outputs/evaluation/oracle_wavs/
+outputs/evaluation/*_wavs/
+
+# ==============================================================================
+# 3. LARGE INTERMEDIATE ML / DSP ARTIFACTS & PIPELINE CACHES
+# ==============================================================================
+# Numerical arrays and feature dumps
+*.npy
+*.npz
+
+# DSP / Mel-spectrogram / STFT / acoustic feature caches
+*.fbank
+*.spectrogram
+*.stft
+*.mfcc
+*.ark
+*.scp
+
+# Large alignment and intermediate pipeline dumps
+outputs/mfa/
+outputs/alignments/
+outputs/g2p/
+
+# Model checkpoints, serialized models, and training caches
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+*.bin
+*.alimdl
+*.mdl
+
+# MFA & Kaldi internal artifacts
+*.fst
+*.mat
+*.db
+*.sqlite
+*.sqlite3
+
+# ==============================================================================
+# 4. TEMPORARY / LOG / CACHE FILES
+# ==============================================================================
+*.log
+*.tmp
+*.temp
+*.cache
+*.bak
+*.swp
+*.swo
+*~
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Testing, type checking, and linter caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.hypothesis/
+.tox/
+.nox/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# ==============================================================================
+# 5. LOCAL PYTHON / CONDA ENVIRONMENTS
+# ==============================================================================
+.venv/
+venv/
+env/
+.env/
+ENV/
+env.bak/
+venv.bak/
+conda-env/
+conda-envs/
+miniconda3/
+anaconda3/
+
+# ==============================================================================
+# 6. OPERATING SYSTEM & IDE FILES
+# ==============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDEs & text editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# ==============================================================================
+# 7. LOCAL SECRETS / CREDENTIALS
+# ==============================================================================
+.env
+.env.*
+!.env.example
+secrets.json
+credentials
+credentials.json
+tokens
+tokens.json
+*.pem
+*.key
+*.cert
+*.crt
+id_rsa
+id_ed25519
+
+# ==============================================================================
+# CRITICAL REPRODUCIBILITY ARTIFACTS (EXPLICITLY PRESERVED)
+# ==============================================================================
+!data_splits/
+!data_splits/**
+!outputs/
+!outputs/models/
+!outputs/models/v1_hmm_model.json
+!outputs/evaluation/
+!outputs/evaluation/final_evaluation_results.json
