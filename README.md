@@ -130,7 +130,14 @@ python models/train_hmm_v2.py
 python evaluation/run_evaluation_test_final.py
 ```
 
-## 7. Team Member Details
+## 7. Documentation
+The detailed study materials and the official two-page summary write-up can be found in the [`documentation/`](./documentation/) directory:
+- [Two-Page Project Summary (PDF)](./documentation/ML_Mini_Project_Writeup.pdf)
+- [Project Overview Study](./documentation/01_PROJECT_OVERVIEW.md)
+- [V1 Pipeline Study](./documentation/02_V1_COMPLETE_PIPELINE.md)
+- [V2 Pipeline Study](./documentation/03_V2_COMPLETE_PIPELINE.md)
+
+## 8. Team Member Details
 - **Sumukh Shandilya** - PES1UG24CS481, CSE H
-- **Manoj Shrikant Gaonkar** -
-PES1UG25CS827, CSE H
+- **Manoj Shrikant Gaonkar** - PES1UG25CS827, CSE H
+
